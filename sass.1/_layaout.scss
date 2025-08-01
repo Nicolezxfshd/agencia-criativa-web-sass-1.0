@@ -1,6 +1,14 @@
+@use 'mixins' as *; // só se ainda não estiver usando
+
 .banner {
   text-align: center;
+
+  @include celular {
+    text-align: left;
+    padding: 0 1rem;
+  }
 }
+
 .banner__img {
   display: block;
   margin: 30px auto 20px auto;
@@ -9,7 +17,13 @@
   height: auto;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+
+  @include celular {
+    width: 95vw;
+    margin: 20px auto;
+  }
 }
+
 .contato {
   display: flex;
   flex-direction: column;
@@ -17,7 +31,13 @@
   align-items: center;
   min-height: 80vh;
   width: 100vw;
+
+  @include celular {
+    padding: 1rem;
+    min-height: auto;
+  }
 }
+
 .contato__form,
 .contato .form-contato {
   display: flex;
@@ -31,4 +51,13 @@
   border-radius: 1.2em;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   padding: 2em 1.5em;
+
+  @include tablet {
+    padding: 1.5em 1em;
+  }
+
+  @include celular {
+    padding: 1em;
+    gap: 0.8em;
+  }
 }
