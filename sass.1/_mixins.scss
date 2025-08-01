@@ -5,6 +5,12 @@
     @content;
   }
 }
+// _mixins.scss
+@mixin tablet {
+  @media (min-width: 600px) and (max-width: 1024px) {
+    @content;
+  }
+}
 
 // 🎨 Gradiente de fundo
 @mixin gradiente-horizontal($cor-inicio, $cor-fim) {
