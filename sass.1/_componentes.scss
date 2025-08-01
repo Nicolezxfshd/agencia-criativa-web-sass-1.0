@@ -1,5 +1,6 @@
 @use 'variaveis' as *;
-@use 'mixins';
+@include mixins.centralizar-flex;
+
 
 // 🔹 Navegação principal
 .main-nav {
