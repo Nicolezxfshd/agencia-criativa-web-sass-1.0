@@ -11,6 +11,24 @@
     @content;
   }
 }
+@mixin celular {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin desktop-grande {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
 .banner {
   font-size: 2rem;
 
