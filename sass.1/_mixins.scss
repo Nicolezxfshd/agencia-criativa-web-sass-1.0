@@ -11,6 +11,25 @@
     @content;
   }
 }
+.banner {
+  font-size: 2rem;
+
+  @include celular {
+    font-size: 1.2rem;
+  }
+
+  @include tablet {
+    font-size: 1.5rem;
+  }
+
+  @include laptop {
+    font-size: 1.8rem;
+  }
+
+  @include desktop-grande {
+    font-size: 2.2rem;
+  }
+}
 
 // 🎨 Gradiente de fundo
 @mixin gradiente-horizontal($cor-inicio, $cor-fim) {
