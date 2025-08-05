@@ -14,12 +14,14 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #f5ecd7 0%, #f3e6c9 100%);
-  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-  color: #22223b;
+  background: linear-gradient(135deg, $cor-gradiente-inicio 0%, $cor-gradiente-fim 100%);
+  font-family: $fonte-padrao;
+  color: $cor-fonte-principal;
   min-height: 100vh;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
+
 
 a {
   color: #007BFF;
@@ -48,13 +50,6 @@ img {
   display: block;
 }
 
-body {
-  background: linear-gradient(135deg, $cor-gradiente-inicio 0%, $cor-gradiente-fim 100%);
-  background: linear-gradient(135deg, $cor-gradiente-inicio 0%, $cor-gradiente-fim 100%);
-  font-family: $fonte-padrao;
-  color: $cor-fonte-principal;
-  color: $cor-fonte-principal;
-}
 
 .contato {
   display: flex;
