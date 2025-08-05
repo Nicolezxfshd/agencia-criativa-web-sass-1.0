@@ -1,5 +1,6 @@
 @use 'variaveis' as *;
-@include mixins.centralizar-flex;
+@use "scss/mixins";
+
 
 
 // 🔹 Navegação principal
@@ -14,6 +15,21 @@
   margin: 1.2rem 0 1.5rem 0;
   @include mixins.gradiente-horizontal($cor-banner-gradiente-inicio, $cor-banner-gradiente-fim);
   @include mixins.sombra-padrao;
+
+  @mixin centralizar-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin gradiente-horizontal($cor1, $cor2) {
+  background: linear-gradient(to right, $cor1, $cor2);
+}
+
+@mixin sombra-padrao {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 
   &.responsive {
     flex-direction: column;
