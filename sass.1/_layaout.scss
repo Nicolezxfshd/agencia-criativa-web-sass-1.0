@@ -1,6 +1,6 @@
 @use 'mixins' as *;
 
-// ======== BANNER ========
+/* ======== BANNER ======== */
 .banner {
   text-align: center;
 
@@ -24,9 +24,8 @@
     margin: 20px auto;
   }
 }
-@use 'mixins' as *;
 
-// MENU BASE
+/* ======== MENU ======== */
 .menu {
   display: flex;
   align-items: center;
@@ -56,7 +55,6 @@
   }
 }
 
-// LINKS DO MENU
 .menu__item {
   text-decoration: none;
   color: #333;
@@ -75,7 +73,7 @@
   }
 }
 
-// BOTÃO HAMBÚRGUER
+/* ======== BOTÃO HAMBÚRGUER ======== */
 .menu-toggle {
   display: none;
   background: none;
@@ -97,7 +95,7 @@
   }
 }
 
-// ======== CONTATO ========
+/* ======== CONTATO ======== */
 .contato {
   display: flex;
   flex-direction: column;
@@ -133,75 +131,5 @@
   @include celular {
     padding: 1em;
     gap: 0.8em;
-  }
-}
-
-// ======== MENU RESPONSIVO ========
-.menu {
-  display: flex;
-  gap: 1rem;
-
-  @include celular {
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #fff;
-    width: 70%;
-    max-width: 250px;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &--ativo {
-    @include celular {
-      transform: translateX(0);
-    }
-  }
-}
-
-.menu__item {
-  list-style: none;
-
-  a {
-    display: inline-block;
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
-    background: #f2f2f2;
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s;
-
-    &:hover {
-      background: #ddd;
-    }
-
-    @include celular {
-      width: 100%;
-    }
-  }
-}
-
-// ======== BOTÃO HAMBÚRGUER ========
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  @include celular {
-    display: block;
-  }
-
-  span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #333;
-    margin: 5px 0;
-    transition: 0.3s;
   }
 }
