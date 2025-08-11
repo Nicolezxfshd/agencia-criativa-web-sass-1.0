@@ -7,18 +7,19 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <nav class="main-nav" id="main-nav">
-        <div class="menu-toggle" id="menu-toggle">
-            <span class="menu-toggle__bar"></span>
-            <span class="menu-toggle__bar"></span>
-            <span class="menu-toggle__bar"></span>
-        </div>
-        <a href="#home" class="main-nav__btn">Home</a>
-        <a href="#sobre" class="main-nav__btn">Sobre Nós</a>
-        <a href="#servicos" class="main-nav__btn">Serviços</a>
-        <a href="#depoimentos" class="main-nav__btn">Depoimentos</a>
-        <a href="#contato" class="main-nav__btn">Contato</a>
-    </nav>
+    <nav class="menu" id="main-nav">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <a href="#home" class="menu__item">Home</a>
+    <a href="#sobre" class="menu__item">Sobre Nós</a>
+    <a href="#servicos" class="menu__item">Serviços</a>
+    <a href="#depoimentos" class="menu__item">Depoimentos</a>
+    <a href="#contato" class="menu__item">Contato</a>
+</nav>
     </header>
     <main>
         <section id="home" class="banner">
@@ -74,11 +75,10 @@
     
 </body>
 <script>
-  // Menu responsivo
-  const menuToggle = document.getElementById('menu-toggle');
-  const mainNav = document.getElementById('main-nav');
-  menuToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('responsive');
-  });
+const menuToggle = document.getElementById('menu-toggle');
+const mainNav = document.getElementById('main-nav');
+
+menuToggle.addEventListener('click', () => {
+  mainNav.classList.toggle('menu--ativo');
+});
 </script>
-</html>
